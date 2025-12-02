@@ -1,0 +1,29 @@
+# Dependencies & Artifacts
+node_modules
+.next
+out
+coverage
+build
+dist
+
+# Secrets & Environment
+.env*
+
+# Docker & Configs
+Dockerfile*
+compose*
+README.md
+
+# System, Git & IDE
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-*.log*
+pnpm-debug.log*

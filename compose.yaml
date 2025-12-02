@@ -1,0 +1,11 @@
+name: gndzkrkc
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - '3000:3000'
+    restart: always
