@@ -8,7 +8,8 @@ export function cspMiddleware(request: NextRequest) {
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ''}`,
     "script-src-attr 'none'",
-    `style-src 'self' 'nonce-${nonce}'${isDev ? " 'unsafe-inline'" : ''}`,
+    // Allow inline styles specifically for Next.js indicator in development
+    `style-src 'self' ${isDev ? "'unsafe-inline'" : `'nonce-${nonce}'`}`,
     "img-src 'self' blob: data:",
     "connect-src 'self' https: wss:",
     "frame-src 'none'",
