@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+import { cspMiddleware } from './middlewares/csp';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function proxy(request: NextRequest) {
-  return NextResponse.next();
+  return cspMiddleware(request);
 }
 
 export const config = {
