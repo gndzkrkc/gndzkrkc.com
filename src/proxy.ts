@@ -10,14 +10,18 @@ export function proxy(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
+     * Match all request paths except:
+     * - `/api/**` (API routes)
+     * - `/_next/static/**` (static assets)
+     * - `/_next/image/**` (image optimization requests)
+     * - Any path containing a dot (e.g. `favicon.ico`)
+     *
+     * Also skip prefetch requests:
+     * - When `next-router-prefetch` header exists
+     * - When `purpose: prefetch`
      */
     {
-      source: '/((?!api|_next/static|_next/image|favicon.ico).*)',
+      source: '/((?!api|_next/static|_next/image|.*\\..*).*)',
       missing: [
         { type: 'header', key: 'next-router-prefetch' },
         { type: 'header', key: 'purpose', value: 'prefetch' },
