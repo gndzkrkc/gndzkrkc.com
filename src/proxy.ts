@@ -1,8 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { i18nRoutingConfig } from '@/i18n/routing';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function proxy(request: NextRequest) {
-  return NextResponse.next();
+  const i18nMiddleware = createMiddleware(i18nRoutingConfig);
+  return i18nMiddleware(request);
 }
 
 export const config = {
