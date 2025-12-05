@@ -15,9 +15,9 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              `script-src 'self' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ''}`,
+              "script-src 'self' 'unsafe-inline'",
               "script-src-attr 'none'",
-              `style-src 'self' ${isDev ? "'unsafe-inline'" : ''}`,
+              "style-src 'self' 'unsafe-inline'",
               "img-src 'self' blob: data:",
               "connect-src 'self' https: wss:",
               "frame-src 'none'",
