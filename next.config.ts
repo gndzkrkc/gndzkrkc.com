@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   headers: async () => {
     return [
       {
-        source: '/(.*)',
+        source: '/((?!api|_next/static|_next/image|.*\\..*).*)',
         headers: [
           {
             key: 'Content-Security-Policy',
