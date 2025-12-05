@@ -15,17 +15,7 @@ export const config = {
      * - `/_next/static/**` (static assets)
      * - `/_next/image/**` (image optimization requests)
      * - Any path containing a dot (e.g. `favicon.ico`)
-     *
-     * Also skip prefetch requests:
-     * - When `next-router-prefetch` header exists
-     * - When `purpose: prefetch`
      */
-    {
-      source: '/((?!api|_next/static|_next/image|.*\\..*).*)',
-      missing: [
-        { type: 'header', key: 'next-router-prefetch' },
-        { type: 'header', key: 'purpose', value: 'prefetch' },
-      ],
-    },
+    '/((?!api|_next/static|_next/image|.*\\..*).*)',
   ],
 };
