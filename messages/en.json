@@ -1,1 +1,7 @@
-{}
+{
+  "theme-toggle": {
+    "aria-switch-to-light": "Switch to light mode",
+    "aria-switch-to-dark": "Switch to dark mode",
+    "aria-switch-to-system": "Use system theme"
+  }
+}
