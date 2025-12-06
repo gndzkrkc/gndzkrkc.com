@@ -1,14 +1,39 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const isDev = process.env.NODE_ENV !== 'production';
-
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
   headers: async () => {
     return [
       {
+        // Global security headers
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'off',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: ['camera=()', 'microphone=()', 'geolocation=()'].join(', '),
+          },
+        ],
+      },
+      {
+        // CSP: HTML pages only
         source: '/((?!api|_next/static|_next/image|.*\\..*).*)',
         headers: [
           {
@@ -20,7 +45,6 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' blob: data:",
               "connect-src 'self' https: wss:",
-              "frame-src 'none'",
               "font-src 'self'",
               "object-src 'none'",
               "base-uri 'self'",
