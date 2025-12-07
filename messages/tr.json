@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "Gündüz Karakeçe | Bağımsız Geliştirici",
+    "description": "Çalışmalarımı ve projelerime ait kaynakları paylaştığım kişisel bir alan."
+  },
   "theme-toggle": {
     "aria-switch-to-light": "Açık moda geç",
     "aria-switch-to-dark": "Koyu moda geç",
