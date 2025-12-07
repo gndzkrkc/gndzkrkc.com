@@ -16,6 +16,7 @@
     "start": "bun --bun next start",
     "prod": "docker compose up --build",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky"
