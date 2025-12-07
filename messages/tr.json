@@ -7,5 +7,47 @@
     "aria-switch-to-light": "Açık moda geç",
     "aria-switch-to-dark": "Koyu moda geç",
     "aria-switch-to-system": "Sistem temasına uy"
+  },
+  "projects": {
+    "stay-hydrated": {
+      "privacy-policy": {
+        "nav": {
+          "back-to-app": "Uygulamaya Dön"
+        },
+        "header": {
+          "title": "Su Günlüğü Android",
+          "subtitle": "Gizlilik Politikası"
+        },
+        "abstract": {
+          "title": "Özet",
+          "statement": "Verilerinizi toplamıyoruz, nokta."
+        },
+        "data-storage": {
+          "title": "Veri tanımı ve saklama yöntemi",
+          "paragraph-1": "Verileriniz yalnızca cihazınızın hafızasında tutulur, rızanız olmadan üçüncü taraflarla paylaşılmaz.",
+          "list": {
+            "intro": "Su Günlüğü cihazınızda şu verileri saklayabilir:",
+            "item-1": "Uygulama tercihleriniz",
+            "item-2": "Cinsiyetiniz, boyunuz ve doğum tarihiniz",
+            "item-3": "Kilo ve su içimi kayıtlarınız"
+          }
+        },
+        "google-services": {
+          "title": "Google LLC tarafından sağlanan hizmetler",
+          "paragraph": "Google Drive ile yedekleme için hesabınızda uygulamaya özel gizli bir klasör oluşturma izni istenir. Böylece verilerinizi gizliliğinizi tehlikeye atmadan yedekleyebilirsiniz. Google Fit ile eşleştirme için istenen izinler ise su alımınızı, boy ve ağırlık kayıtlarını eşleştirmek üzere kullanılır. Bu hizmetleri kullananlar, ilgili Google hizmet şartlarını ve gizlilik bildirimlerini kabul etmiş olur."
+        },
+        "changes": {
+          "title": "Gizlilik bildiriminin güncellenmesi",
+          "paragraph": "Gizlilik politikasını kullanıcılara bildirmeksizin herhangi bir zaman güncelleme hakkını saklı tutarız. Ancak aynı zamanda kişisel verilerinizi asla toplamayacağımızı ve rızanız olmadan üçüncü taraflarla paylaşmayacağımızı da taahhüt ederiz. Su Günlüğü’nü kullanarak bu gizlilik bildirimini kabul etmiş olursunuz."
+        },
+        "footnotes": {
+          "1": "Uygulama adı bölgeden bölgeye değişebilir. Su Günlüğü, bazı Türk Devletleri Teşkilatı üyesi ülkelerde kullanılır.",
+          "2": "Bu metinde Su Günlüğü yer yer “biz”, “(bu) uygulama” şeklinde anılmaktadır."
+        },
+        "footer": {
+          "last-updated": "Son Güncelleme: 22 Şubat 2022"
+        }
+      }
+    }
   }
 }

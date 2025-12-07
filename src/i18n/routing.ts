@@ -6,5 +6,9 @@ export const i18nRoutingConfig = defineRouting({
   localePrefix: 'never',
   pathnames: {
     '/': '/',
+
+    '/projects/stay-hydrated/policy/': {
+      tr: '/projeler/su-gunlugu/gizlilik-bildirimi/',
+    },
   },
 });
