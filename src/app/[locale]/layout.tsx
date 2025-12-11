@@ -12,7 +12,7 @@ const inter = Inter({
   subsets: ['latin'],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const jbMono = JetBrains_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
 });
@@ -42,9 +42,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${jbMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -52,9 +50,13 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
-            <BreadcrumbNavigation />
-            {children}
-            <ThemeToggle />
+            <div className="min-h-screen">
+              <BreadcrumbNavigation />
+              <ThemeToggle />
+              <div className="pt-8 pb-24 md:pt-24 md:pb-48 px-6">
+                {children}
+              </div>
+            </div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
