@@ -7,6 +7,10 @@ export const i18nRoutingConfig = defineRouting({
   pathnames: {
     '/': '/',
 
+    '/projects/stay-hydrated/': {
+      tr: '/projeler/su-gunlugu/',
+    },
+
     '/projects/stay-hydrated/policy/': {
       tr: '/projeler/su-gunlugu/gizlilik-bildirimi/',
     },
