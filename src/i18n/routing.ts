@@ -14,5 +14,9 @@ export const i18nRoutingConfig = defineRouting({
     '/projects/stay-hydrated/policy/': {
       tr: '/projeler/su-gunlugu/gizlilik-bildirimi/',
     },
+
+    '/projects/stay-hydrated/localization/': {
+      tr: '/projeler/su-gunlugu/yerellestirme/',
+    },
   },
 });
