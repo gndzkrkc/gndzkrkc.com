@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans">
-      <main className="container max-w-3xl mx-auto px-6 pb-24">
+      <main className="container max-w-2xl mx-auto px-6 pb-24">
         {/* HEADER SECTION */}
         <div className="mb-8">
           <h1 className="text-3xl font-extrabold tracking-tight mb-2 text-foreground">
