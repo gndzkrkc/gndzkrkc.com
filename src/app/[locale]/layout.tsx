@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { BreadcrumbNavigation } from '@/components/breadcrumb-navigation';
 
 const inter = Inter({
   variable: '--font-sans',
@@ -51,6 +52,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
+            <BreadcrumbNavigation />
             {children}
             <ThemeToggle />
           </NextIntlClientProvider>

@@ -3,6 +3,15 @@
     "title": "Gündüz Karakeçe | Bağımsız Geliştirici",
     "description": "Çalışmalarımı ve projelerime ait kaynakları paylaştığım kişisel bir alan."
   },
+  "navigation": {
+    "aria-go-home": "Ana sayfaya git",
+    "aria-go-to": "{page} sayfasına git",
+    "aria-backward-nav": "Geri Navigasyon",
+    "routes": {
+      "/projects/stay-hydrated/": "Su Günlüğü",
+      "/projects/stay-hydrated/policy/": "Gizlilik Bildirimi"
+    }
+  },
   "theme-toggle": {
     "aria-switch-to-light": "Açık moda geç",
     "aria-switch-to-dark": "Koyu moda geç",

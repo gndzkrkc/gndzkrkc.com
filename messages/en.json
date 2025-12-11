@@ -3,6 +3,15 @@
     "title": "Gündüz Karakeçe | Indie Developer",
     "description": "A personal space featuring my work and project resources."
   },
+  "navigation": {
+    "aria-go-home": "Go to homepage",
+    "aria-go-to": "Go to {page}",
+    "aria-backward-nav": "Backward Navigation",
+    "routes": {
+      "/projects/stay-hydrated/": "Stay Hydrated",
+      "/projects/stay-hydrated/policy/": "Privacy Policy"
+    }
+  },
   "theme-toggle": {
     "aria-switch-to-light": "Switch to light mode",
     "aria-switch-to-dark": "Switch to dark mode",
