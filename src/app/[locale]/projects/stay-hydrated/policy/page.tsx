@@ -1,8 +1,5 @@
 import { Metadata } from 'next';
-import { IntlLink } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { ArrowLeft } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
@@ -28,20 +25,6 @@ export default function PrivacyPolicyPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans">
-      {/* NAV: Back button */}
-      <nav className="container max-w-3xl mx-auto px-6 py-8">
-        <Button
-          variant="ghost"
-          asChild
-          className="-ml-4 text-muted-foreground hover:text-foreground"
-        >
-          {/* TODO: Update the link */}
-          <IntlLink href="/">
-            <ArrowLeft className="mr-2 h-4 w-4" /> {t('nav.back-to-app')}
-          </IntlLink>
-        </Button>
-      </nav>
-
       <main className="container max-w-3xl mx-auto px-6 pb-24">
         {/* HEADER SECTION */}
         <div className="mb-8">
