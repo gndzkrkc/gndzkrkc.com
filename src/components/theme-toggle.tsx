@@ -47,7 +47,7 @@ export function ThemeToggle() {
 
   return (
     <div
-      className={`fixed top-8 right-8 z-50 flex flex-col gap-2 transition-opacity duration-300 ${
+      className={`fixed top-8 right-6 lg:right-8 z-50 flex flex-col gap-2 transition-opacity duration-300 ${
         visible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
@@ -56,7 +56,7 @@ export function ThemeToggle() {
         size="icon"
         onClick={() => setTheme(current.next)}
         aria-label={t(`aria-switch-to-${current.next}`)}
-        className="shadow-xl"
+        className="shadow-xl -mt-0.5"
       >
         <current.icon className="h-5 w-5" />
       </Button>
