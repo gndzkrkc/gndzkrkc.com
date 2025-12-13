@@ -50,17 +50,19 @@ export default function LocalizationTipsPage() {
     <main className="container max-w-2xl mx-auto">
       <article className="prose prose-zinc dark:prose-invert max-w-none leading-relaxed">
         {/* Header Section */}
-        <div className="not-prose mb-8">
-          <h1 className="text-3xl font-extrabold tracking-tight mb-2">
+        <header className="not-prose">
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground mb-2">
             Localization Guidelines
           </h1>
-          <p className="text-xl text-muted-foreground">Tips for Translators</p>
-        </div>
+          <strong className="block text-2xl font-medium text-muted-foreground/80 mb-4">
+            Tips for Translators
+          </strong>
+        </header>
 
-        <Separator className="my-8" />
+        <Separator className="mt-8 mb-16" />
 
         {/* 1. Be friendly */}
-        <h3 id="be-friendly">Be friendly.</h3>
+        <h2>Be friendly.</h2>
         <ul className="list-disc space-y-2">
           <li>
             Stay Hydrated aims to feel like a friendly companion. Please address
@@ -75,9 +77,7 @@ export default function LocalizationTipsPage() {
         </ul>
 
         {/* 2. Be creative */}
-        <h3 id="be-creative" className="mt-8">
-          Be creative.
-        </h3>
+        <h2 className="mt-8">Be creative.</h2>
         <ul className="list-disc space-y-2">
           <li>
             You will encounter similar or duplicate source strings, such as:
@@ -104,9 +104,7 @@ export default function LocalizationTipsPage() {
         </ul>
 
         {/* 3. Be careful */}
-        <h3 id="be-careful" className="mt-8">
-          Be careful.
-        </h3>
+        <h2 className="mt-8">Be careful.</h2>
         <ul className="list-disc space-y-2">
           <li>
             Notification strings are often paired. For instance, strings with
