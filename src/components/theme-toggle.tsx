@@ -6,7 +6,7 @@ import { Sun, Moon, SunMoon } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
 
-const SCROLL_THRESHOLD = 90;
+const SCROLL_THRESHOLD = 50;
 
 const THEMES = {
   system: { next: 'light', icon: SunMoon },
