@@ -19,6 +19,66 @@
   },
   "projects": {
     "stay-hydrated": {
+      "header": {
+        "title": "Stay Hydrated",
+        "subtitle": "Water Intake Reminder & Tracker"
+      },
+      "badges": {
+        "category": "Health & Fitness",
+        "freemium": "Freemium",
+        "android": "Android"
+      },
+      "features": {
+        "performance": {
+          "title": "Lightweight",
+          "description": "Battery efficient and highly optimized."
+        },
+        "privacy": {
+          "title": "Private",
+          "description": "No ads, no tracking, and no bloatware."
+        },
+        "reminders": {
+          "title": "Smart",
+          "description": "Context-aware adaptive reminders."
+        }
+      },
+      "stats": {
+        "downloads": "Downloads",
+        "downloads_val": "200K+",
+        "ratings": "8K Ratings",
+        "reviews": "Reviews",
+        "reviews_val": "3K"
+      },
+      "cta": {
+        "download": "Get it on Google Play"
+      },
+      "description": {
+        "why-title": "Why another water tracker?",
+        "paragraph-1": "Most water tracker apps are bloated or require an internet connection just to log a glass of water.",
+        "paragraph-1-continue": "Stay Hydrated is built differently; it follows a user-first approach, and that's why users loved it from day one. No intrusive permissions, no ads, nothing you and I hate.",
+        "paragraph-2": "It features a minimal and focused UI designed to get out of your way. Beyond standard tracking, it offers extra features including:",
+        "features": {
+          "health": "Health Metrics",
+          "health-desc": "Built-in weight tracking, BMI calculation, and height-for-age charts.",
+          "guidance": "Intelligent Tips",
+          "guidance-desc": "Guidance based on your activity and personal goals.",
+          "customizations": "Customizations",
+          "customizations-desc": "Theming, flexible reminder schedules, unit systems and more.",
+          "backup": "Cloud Backups",
+          "backup-desc": "Optional secure Google Drive backups for Star Members."
+        },
+        "contribution": {
+          "title": "Community Contribution",
+          "paragraph": "Thanks to the incredible support from dozens of volunteer contributors around the world, Stay Hydrated has been fully translated into over 10 languages.",
+          "crowdin-cta": "Contribute on Crowdin",
+          "localization-tips-cta": "View Localization Guidelines"
+        }
+      },
+      "footer": {
+        "privacy-notice": "Privacy Notice",
+        "support": "Support",
+        "copyright": "© {year} Gündüz Karakeçe"
+      },
       "privacy-notice": {
         "nav": {
           "back-to-app": "Back to App"

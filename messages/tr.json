@@ -19,6 +19,66 @@
   },
   "projects": {
     "stay-hydrated": {
+      "header": {
+        "title": "Su Günlüğü",
+        "subtitle": "Su İçme Hatırlatıcısı"
+      },
+      "badges": {
+        "category": "Sağlık ve Fitness",
+        "freemium": "Freemium",
+        "android": "Android"
+      },
+      "features": {
+        "performance": {
+          "title": "Hafif",
+          "description": "Pil dostu ve inanılmaz derecede hızlı."
+        },
+        "privacy": {
+          "title": "Güvenli",
+          "description": "Rahatsız edici reklamlar ve takipçiler yok."
+        },
+        "reminders": {
+          "title": "Akıllı",
+          "description": "Rutininize uyum sağlayan akıllı bildirimler."
+        }
+      },
+      "stats": {
+        "downloads": "İndirme",
+        "downloads_val": "200B+",
+        "ratings": "8B+ Puanlama",
+        "reviews": "Yorum",
+        "reviews_val": "3B"
+      },
+      "cta": {
+        "download": "Google Play'den İndirin"
+      },
+      "description": {
+        "why-title": "Neden başka bir su uygulaması daha?",
+        "paragraph-1": "Çoğu su takip uygulaması şişkin bir yapıya sahiptir veya bir bardak su kaydetmek için bile internet bağlantısı gerektirir.",
+        "paragraph-1-continue": "Su Günlüğü farklı bir anlayışla geliştirildi; ve belki de bu yüzden kullanıcılar ilk günden beri onu sevdi. Gereksiz izinler, reklamlar ve aslında kullanırken bizim de hoşlanmadığımız rahatsız edici unsurların hiçbiri yok.",
+        "paragraph-2": "Uygulama, işinizi kolaylaştırmak için tasarlanmış minimalist bir arayüze sahiptir. Temel işlevlerin ötesinde bazı ek özellikler şunlardır:",
+        "features": {
+          "health": "Sağlık Metrikleri",
+          "health-desc": "Dahili kilo takibi, beden kitle indeksi ve yaşa göre boy tabloları.",
+          "guidance": "Akıllı İpuçları",
+          "guidance-desc": "Aktivitenize ve kişisel hedeflerinize dayalı faydalı bilgiler.",
+          "customizations": "Kişiselleştirme",
+          "customizations-desc": "Tema seçenekleri, esnek hatırlatıcı programları ve daha fazlası.",
+          "backup": "Bulut Yedekleme",
+          "backup-desc": "Yıldız Üyeler için isteğe bağlı güvenli Google Drive yedeklemeleri."
+        },
+        "contribution": {
+          "title": "Topluluk Katkısı",
+          "paragraph": "Su Günlüğü, dünyanın dört bir yanından onlarca gönüllü çevirmenin inanılmaz destekleri sayesinde 10'dan fazla dile tamamen çevrilmiştir.",
+          "crowdin-cta": "Crowdin'de Katkıda Bulun",
+          "localization-tips-cta": "Yerelleştirme Kılavuzunu Gör"
+        }
+      },
+      "footer": {
+        "privacy-notice": "Gizlilik Bildirimi",
+        "support": "Destek",
+        "copyright": "© {year} Gündüz Karakeçe"
+      },
       "privacy-notice": {
         "nav": {
           "back-to-app": "Uygulamaya Dön"
