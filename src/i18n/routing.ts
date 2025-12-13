@@ -11,7 +11,7 @@ export const i18nRoutingConfig = defineRouting({
       tr: '/projeler/su-gunlugu/',
     },
 
-    '/projects/stay-hydrated/policy/': {
+    '/projects/stay-hydrated/privacy-notice/': {
       tr: '/projeler/su-gunlugu/gizlilik-bildirimi/',
     },
 

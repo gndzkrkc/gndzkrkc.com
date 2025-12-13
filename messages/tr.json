@@ -9,7 +9,7 @@
     "aria-backward-nav": "Geri Navigasyon",
     "routes": {
       "/projects/stay-hydrated/": "Su Günlüğü",
-      "/projects/stay-hydrated/policy/": "Gizlilik Bildirimi"
+      "/projects/stay-hydrated/privacy-notice/": "Gizlilik Bildirimi"
     }
   },
   "theme-toggle": {
@@ -19,13 +19,13 @@
   },
   "projects": {
     "stay-hydrated": {
-      "privacy-policy": {
+      "privacy-notice": {
         "nav": {
           "back-to-app": "Uygulamaya Dön"
         },
         "header": {
-          "title": "Su Günlüğü Android",
-          "subtitle": "Gizlilik Politikası"
+          "title": "Su Günlüğü Gizlilik Bildirimi",
+          "subtitle": "Senin uygulaman, senin verilerin."
         },
         "abstract": {
           "title": "Özet",

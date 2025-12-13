@@ -9,7 +9,7 @@
     "aria-backward-nav": "Backward Navigation",
     "routes": {
       "/projects/stay-hydrated/": "Stay Hydrated",
-      "/projects/stay-hydrated/policy/": "Privacy Policy"
+      "/projects/stay-hydrated/privacy-notice/": "Privacy Notice"
     }
   },
   "theme-toggle": {
@@ -19,13 +19,13 @@
   },
   "projects": {
     "stay-hydrated": {
-      "privacy-policy": {
+      "privacy-notice": {
         "nav": {
           "back-to-app": "Back to App"
         },
         "header": {
-          "title": "Stay Hydrated for Android",
-          "subtitle": "Privacy Policy"
+          "title": "Stay Hydrated Privacy Notice",
+          "subtitle": "Your app, your data."
         },
         "abstract": {
           "title": "Abstract",
@@ -46,8 +46,8 @@
           "paragraph": "For Google Drive, Stay Hydrated requests your permission to create a hidden app-specific folder in your account. This way, you can back up your data without compromising your privacy. For Google Fit, read and write access to nutrition and body info is requested. These permissions are needed to sync your water intake, height, and weight records. Please note that you accept Google's relevant terms of service and privacy statements by using these services."
         },
         "changes": {
-          "title": "Changes to this privacy policy",
-          "paragraph": "We reserve the right to make changes to this privacy policy at any time, with or without notice to users. However, we also promise that we will never collect your personal data and share it with third parties without your consent. By using Stay Hydrated, you acknowledge that you understand and agree to the terms of this privacy statement."
+          "title": "Changes to this privacy notice",
+          "paragraph": "We reserve the right to make changes to this privacy notice at any time, with or without notice to users. However, we also promise that we will never collect your personal data and share it with third parties without your consent. By using Stay Hydrated, you acknowledge that you understand and agree to the terms of this privacy statement."
         },
         "footnotes": {
           "1": "Exact app name may differ from region to region.",

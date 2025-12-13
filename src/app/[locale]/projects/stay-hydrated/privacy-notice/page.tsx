@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: 'projects.stay-hydrated.privacy-policy',
+    namespace: 'projects.stay-hydrated.privacy-notice',
   });
 
   return {
@@ -20,8 +20,8 @@ export async function generateMetadata({
   };
 }
 
-export default function PrivacyPolicyPage() {
-  const t = useTranslations('projects.stay-hydrated.privacy-policy');
+export default function PrivacyNoticePage() {
+  const t = useTranslations('projects.stay-hydrated.privacy-notice');
 
   return (
     <main className="container max-w-2xl mx-auto">
