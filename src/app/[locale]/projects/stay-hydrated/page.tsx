@@ -165,19 +165,22 @@ export default function StayHydratedPage() {
         {FEATURE_ITEMS.map(({ id, Icon, iconBg, iconColor }) => (
           <div
             key={id}
-            className="group relative flex flex-col items-center p-5 rounded-2xl border bg-card/50 hover:bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            className="group relative flex flex-row sm:flex-col items-center p-4 sm:p-5 rounded-2xl border bg-card/50 hover:bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
             <div
-              className={`h-12 w-12 flex items-center justify-center mb-3 ${iconBg} rounded-2xl transition-transform duration-300 group-hover:scale-110`}
+              className={`h-12 w-12 shrink-0 flex items-center justify-center mr-4 sm:mr-0 sm:mb-3 ${iconBg} rounded-2xl transition-transform duration-300 group-hover:scale-110`}
             >
               <Icon className={`h-6 w-6 ${iconColor}`} />
             </div>
-            <h3 className="font-medium text-foreground">
-              {t(`features.${id}.title`)}
-            </h3>
-            <p className="text-sm text-muted-foreground text-center leading-relaxed mt-1">
-              {t(`features.${id}.description`)}
-            </p>
+
+            <div className="flex flex-col text-left sm:text-center">
+              <h3 className="font-medium text-foreground">
+                {t(`features.${id}.title`)}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mt-0.5 sm:mt-1">
+                {t(`features.${id}.description`)}
+              </p>
+            </div>
           </div>
         ))}
       </section>
