@@ -1,65 +1,120 @@
+import { useTranslations } from 'next-intl';
+import { IntlLink } from '@/i18n/navigation';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { ArrowRight, Construction, Github, Linkedin, Mail } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Home() {
+export default function HomePage() {
+  const t = useTranslations('home');
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-12 px-4 space-y-20">
+      {/* 1. HERO SECTION */}
+      <section className="flex flex-col items-center text-center space-y-10 max-w-3xl">
+        <div className="space-y-6">
+          <h1 className="text-4xl sm:text-6xl font-extralight tracking-[0.2em] text-foreground uppercase">
+            Gündüz Karakeçe
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{' '}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{' '}
-            or the{' '}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{' '}
-            center.
-          </p>
+          <h2 className="text-sm sm:text-base text-muted-foreground font-light tracking-[0.3em] uppercase">
+            {t('hero.title')}
+          </h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Under Construction Badge */}
+        <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-800 shadow-sm transition-transform hover:scale-105 cursor-default">
+          <Construction className="h-4 w-4" />
+          <span className="text-xs font-semibold tracking-wide uppercase">
+            {t('status.badge')}
+          </span>
         </div>
-      </main>
-    </div>
+
+        <p className="text-lg text-foreground/70 font-light leading-relaxed max-w-lg mx-auto">
+          {t('status.text')}
+        </p>
+      </section>
+
+      {/* 2. FEATURED PROJECTS */}
+      <section className="w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="flex items-center justify-center mb-6">
+          <h3 className="text-[10px] font-bold text-muted-foreground/60 uppercase tracking-[0.4em]">
+            {t('featured.title')}
+          </h3>
+        </div>
+
+        {/* Stay Hydrated */}
+        <IntlLink href="/projects/stay-hydrated/" className="block group">
+          <Card className="relative overflow-hidden border-border/60 transition-all duration-500 hover:border-foreground/10 hover:shadow-xl dark:hover:shadow-primary/5 bg-card/50 backdrop-blur-sm">
+            <CardHeader className="flex flex-row items-center gap-6 p-6">
+              <div className="h-16 w-16 shrink-0 rounded-2xl bg-card shadow-sm flex items-center justify-center p-2 group-hover:scale-105 transition-transform duration-500">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/stay-hydrated.png"
+                    alt="Stay Hydrated Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="flex-1 space-y-1">
+                <CardTitle className="text-lg font-light tracking-wider uppercase group-hover:text-primary transition-colors flex items-center gap-2">
+                  {t('featured.stay-hydrated-title')}
+                  <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-muted-foreground" />
+                </CardTitle>
+                <CardDescription className="line-clamp-2 text-sm font-light leading-relaxed">
+                  {t('featured.stay-hydrated-desc')}
+                </CardDescription>
+              </div>
+            </CardHeader>
+          </Card>
+        </IntlLink>
+      </section>
+
+      {/* 3. SOCIAL LINKS */}
+      <section className="flex flex-wrap justify-center gap-4">
+        {[
+          {
+            href: 'https://github.com/gndzkrkc',
+            icon: Github,
+            label: 'github',
+            external: true,
+          },
+          {
+            href: 'https://www.linkedin.com/in/gndzkrkc/',
+            icon: Linkedin,
+            label: 'linkedin',
+            external: true,
+          },
+          {
+            href: 'mailto:contact@gndzkrkc.com',
+            icon: Mail,
+            label: 'email',
+            external: false,
+          },
+        ].map(({ href, icon: Icon, label, external }) => (
+          <Button
+            key={label}
+            variant="outline"
+            size="sm"
+            asChild
+            className="rounded-full px-8 border-muted-foreground/20 hover:border-foreground/40 transition-colors"
+          >
+            <Link href={href} {...(external && { target: '_blank' })}>
+              <Icon className="h-4 w-4 mr-2 opacity-70" />
+              <span className="text-xs font-normal tracking-widest uppercase">
+                {t(`links.${label}`)}
+              </span>
+            </Link>
+          </Button>
+        ))}
+      </section>
+    </main>
   );
 }

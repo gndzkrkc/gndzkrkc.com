@@ -17,6 +17,27 @@
     "aria-switch-to-dark": "Switch to dark mode",
     "aria-switch-to-system": "Use system theme"
   },
+  "home": {
+    "hero": {
+      "title": "INDEPENDENT CREATOR | DIGITAL PRODUCTS",
+      "subtitle": "Designing user-friendly digital products."
+    },
+    "status": {
+      "badge": "UNDER CONSTRUCTION",
+      "text": "I'm currently rebuilding my digital home. In the meantime, you can explore my featured work below."
+    },
+    "featured": {
+      "title": "FEATURED PROJECT",
+      "stay-hydrated-title": "Stay Hydrated",
+      "stay-hydrated-desc": "Minimalist water intake reminder for Android."
+    },
+    "links": {
+      "github": "GITHUB",
+      "linkedin": "LINKEDIN",
+      "email": "EMAIL",
+      "view-project": "View Project"
+    }
+  },
   "projects": {
     "stay-hydrated": {
       "header": {

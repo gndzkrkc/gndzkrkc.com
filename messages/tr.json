@@ -17,6 +17,27 @@
     "aria-switch-to-dark": "Koyu moda geç",
     "aria-switch-to-system": "Sistem temasına uy"
   },
+  "home": {
+    "hero": {
+      "title": "BAĞIMSIZ GELİŞTİRİCİ | DİJİTAL ÜRÜNLER",
+      "subtitle": "Kullanıcı dostu dijital ürünler tasarlıyorum."
+    },
+    "status": {
+      "badge": "YAPIM AŞAMASINDA",
+      "text": "Şu anda dijital evimi yeniden inşa ediyorum. Bu sırada, aşağıda öne çıkan çalışmalarıma göz atabilirsiniz."
+    },
+    "featured": {
+      "title": "ÖNE ÇIKAN PROJE",
+      "stay-hydrated-title": "Su Günlüğü",
+      "stay-hydrated-desc": "Android için minimalist su içme hatırlatıcısı."
+    },
+    "links": {
+      "github": "GITHUB",
+      "linkedin": "LINKEDIN",
+      "email": "E-POSTA",
+      "view-project": "Projeyi İncele"
+    }
+  },
   "projects": {
     "stay-hydrated": {
       "header": {
