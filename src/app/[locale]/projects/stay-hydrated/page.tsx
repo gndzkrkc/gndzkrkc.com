@@ -87,7 +87,7 @@ const ExtraFeatureHighlight = ({
   title: string;
   description: string;
 }) => (
-  <div className="flex items-start space-x-3 p-4 bg-card rounded-xl border border-dashed border-border/50">
+  <div className="flex items-start space-x-3 p-4 bg-card rounded-xl border">
     <Icon className="h-5 w-5 mt-1 text-blue-500 shrink-0" />
     <div>
       <p className="font-semibold text-foreground m-0">{title}</p>
