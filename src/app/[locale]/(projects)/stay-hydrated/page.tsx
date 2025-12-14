@@ -23,6 +23,7 @@ import {
 import { useTranslations, useLocale } from 'next-intl';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { SITE_CONFIG, STAY_HYDRATED } from '@/lib/constants';
 
 // --- Types & Configuration ---
 
@@ -110,7 +111,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: `${t('title')} | Gündüz Karakeçe`,
+    title: `${t('title')} | ${SITE_CONFIG.name}`,
     description: t('subtitle'),
   };
 }
@@ -218,7 +219,7 @@ export default function StayHydratedPage() {
 
         {/* Google Play CTA */}
         <Link
-          href="https://play.google.com/store/apps/details?id=gndzkrkc.stayhydrated"
+          href={STAY_HYDRATED.playStoreUrl}
           rel="noopener noreferrer"
           target="_blank"
           className="transition-transform hover:scale-105 active:scale-95 shrink-0"
@@ -281,7 +282,7 @@ export default function StayHydratedPage() {
         <div className="flex flex-col sm:flex-row gap-4 pt-2">
           <Button asChild>
             <Link
-              href="https://crowdin.com/project/stayhydrated"
+              href={STAY_HYDRATED.crowdinUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -309,7 +310,7 @@ export default function StayHydratedPage() {
             <Shield className="h-4 w-4" /> {t('footer.privacy-notice')}
           </IntlLink>
           <Link
-            href="mailto:stayhydrated@gndzkrkc.com"
+            href={`mailto:${STAY_HYDRATED.supportEmail}`}
             className="hover:text-foreground flex items-center gap-2 transition-colors"
           >
             <Mail className="h-4 w-4" /> {t('footer.support')}

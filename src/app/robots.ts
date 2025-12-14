@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next';
-
-const BASE_URL = 'https://gndzkrkc.com';
+import { SITE_CONFIG } from '@/lib/constants';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: `${BASE_URL}/sitemap.xml`,
+    sitemap: `${SITE_CONFIG.url}/sitemap.xml`,
   };
 }

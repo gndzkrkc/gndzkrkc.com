@@ -4,8 +4,7 @@ import {
   type PathnameKey,
   type Locale,
 } from '@/i18n/routing';
-
-const BASE_URL = 'https://gndzkrkc.com';
+import { SITE_CONFIG } from '@/lib/constants';
 
 /**
  * Get the localized pathname for a given route and locale.
@@ -27,7 +26,7 @@ function getLocalizedPath(pathname: PathnameKey, locale: Locale): string {
  */
 function buildUrl(path: string, locale: Locale): string {
   const localizedPath = path === '/' ? '' : path;
-  return `${BASE_URL}/${locale}${localizedPath}`;
+  return `${SITE_CONFIG.url}/${locale}${localizedPath}`;
 }
 
 /**

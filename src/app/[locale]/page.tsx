@@ -11,6 +11,7 @@ import { ArrowRight, Construction, Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PersonJsonLd from '@/components/person-json-ld';
+import { SITE_CONFIG, SOCIAL_LINKS, CONTACT } from '@/lib/constants';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -19,23 +20,20 @@ export default function HomePage() {
     <main className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-12 space-y-20">
       {/* PERSON SCHEMA for SEO */}
       <PersonJsonLd
-        name="Gündüz Karakeçe"
-        url="https://gndzkrkc.com"
+        name={SITE_CONFIG.name}
+        url={SITE_CONFIG.url}
         title={`${t('hero.role')} | ${t('hero.focus')}`}
         description={t('hero.subtitle')}
         // TODO: Add avatar image url later
-        email="mailto:contact@gndzkrkc.com"
-        sameAs={[
-          'https://github.com/gndzkrkc',
-          'https://www.linkedin.com/in/gndzkrkc/',
-        ]}
+        email={`mailto:${CONTACT.email}`}
+        sameAs={Object.values(SOCIAL_LINKS)}
       />
 
       {/* 1. HERO SECTION */}
       <section className="flex flex-col items-center text-center space-y-10 max-w-3xl">
         <div className="space-y-6">
           <h1 className="text-4xl sm:text-6xl font-extralight tracking-[0.2em] text-foreground uppercase">
-            Gündüz Karakeçe
+            {SITE_CONFIG.name}
           </h1>
 
           <h2 className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base text-muted-foreground font-light tracking-[0.3em] uppercase">
@@ -100,19 +98,19 @@ export default function HomePage() {
       <section className="flex flex-wrap justify-center gap-4">
         {[
           {
-            href: 'https://github.com/gndzkrkc',
+            href: SOCIAL_LINKS.github,
             icon: Github,
             label: 'github',
             external: true,
           },
           {
-            href: 'https://www.linkedin.com/in/gndzkrkc/',
+            href: SOCIAL_LINKS.linkedin,
             icon: Linkedin,
             label: 'linkedin',
             external: true,
           },
           {
-            href: 'mailto:contact@gndzkrkc.com',
+            href: `mailto:${CONTACT.email}`,
             icon: Mail,
             label: 'email',
             external: false,
