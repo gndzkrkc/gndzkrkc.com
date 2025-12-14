@@ -175,7 +175,7 @@ export default function StayHydratedPage() {
             <h3 className="font-medium text-foreground">
               {t(`features.${id}.title`)}
             </h3>
-            <p className="text-xs text-muted-foreground text-center leading-relaxed mt-1">
+            <p className="text-sm text-muted-foreground text-center leading-relaxed mt-1">
               {t(`features.${id}.description`)}
             </p>
           </div>
