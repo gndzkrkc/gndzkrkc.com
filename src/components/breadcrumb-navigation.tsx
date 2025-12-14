@@ -11,7 +11,10 @@ export function BreadcrumbNavigation() {
   const pathname = useIntlPathname();
   const { pathnames } = i18nRoutingConfig;
 
-  if (pathname === '/') return null;
+  // Hide breadcrumbs on the homepage and on undefined routes (e.g. 404s).
+  if (pathname === '/' || !Object.keys(pathnames).includes(pathname)) {
+    return null;
+  }
 
   const segments = pathname.split('/').filter(Boolean);
   const items: { path: PathnameKey; name: string }[] = [];

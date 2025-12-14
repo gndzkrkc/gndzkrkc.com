@@ -5,6 +5,8 @@ import { useTheme } from 'next-themes';
 import { Sun, Moon, SunMoon } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
+import { useIntlPathname } from '@/i18n/navigation';
+import { i18nRoutingConfig } from '@/i18n/routing';
 
 const SCROLL_THRESHOLD = 50;
 
@@ -21,6 +23,8 @@ export function ThemeToggle() {
   const visibleRef = useRef(true);
 
   const t = useTranslations('theme-toggle');
+  const pathname = useIntlPathname();
+  const { pathnames } = i18nRoutingConfig;
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -42,6 +46,11 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) return null;
+
+  // Hide on undefined routes (e.g. 404s).
+  if (!Object.keys(pathnames).includes(pathname)) {
+    return null;
+  }
 
   const current = THEMES[theme as keyof typeof THEMES] ?? THEMES.system;
 

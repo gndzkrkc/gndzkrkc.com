@@ -10,6 +10,15 @@
     "routes": {
       "/stay-hydrated/": "Stay Hydrated",
       "/stay-hydrated/privacy-notice/": "Privacy Notice"
+    },
+    "not-found": {
+      "you-are-here": "YOU ARE CURRENTLY HERE",
+      "page-is-not": "THE PAGE IS NOT",
+      "back-to-home": "BACK TO SAFETY",
+      "metadata": {
+        "title": "Page Not Found",
+        "description": "The page you requested was not found. Please return to the homepage."
+      }
     }
   },
   "theme-toggle": {

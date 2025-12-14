@@ -10,6 +10,15 @@
     "routes": {
       "/stay-hydrated/": "Su Günlüğü",
       "/stay-hydrated/privacy-notice/": "Gizlilik Bildirimi"
+    },
+    "not-found": {
+      "you-are-here": "ŞU ANDA BURADASINIZ",
+      "page-is-not": "SAYFA BURADA DEĞİL",
+      "back-to-home": "DÜNYAYA DÖN",
+      "metadata": {
+        "title": "Sayfa Bulunamadı",
+        "description": "Talep ettiğiniz sayfa bulunamadı. Lütfen ana sayfaya dönün."
+      }
     }
   },
   "theme-toggle": {
