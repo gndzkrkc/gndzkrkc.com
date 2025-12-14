@@ -257,14 +257,14 @@ export default function StayHydratedPage() {
             description={t('description.features.guidance-desc')}
           />
           <ExtraFeatureHighlight
-            Icon={Palette}
-            title={t('description.features.customizations')}
-            description={t('description.features.customizations-desc')}
-          />
-          <ExtraFeatureHighlight
             Icon={Cloud}
             title={t('description.features.backup')}
             description={t('description.features.backup-desc')}
+          />
+          <ExtraFeatureHighlight
+            Icon={Palette}
+            title={t('description.features.customizations')}
+            description={t('description.features.customizations-desc')}
           />
         </div>
       </article>
