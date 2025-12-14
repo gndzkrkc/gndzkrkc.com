@@ -16,7 +16,7 @@ export const i18nRoutingConfig = defineRouting({
     },
 
     '/projects/stay-hydrated/localization/': {
-      // tr: '/projeler/su-gunlugu/yerellestirme/',
+      tr: '/projeler/su-gunlugu/yerellestirme/',
     },
   },
 });

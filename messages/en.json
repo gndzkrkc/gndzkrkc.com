@@ -101,6 +101,46 @@
         "support": "Support",
         "copyright": "© {year} Gündüz Karakeçe"
       },
+      "localization": {
+        "metadata": {
+          "title": "Localization Guidelines | Stay Hydrated",
+          "description": "Tips and rules for translating Stay Hydrated."
+        },
+        "header": {
+          "title": "Localization Guidelines",
+          "subtitle": "Tips for Translators"
+        },
+        "sections": {
+          "friendly": {
+            "title": "Be friendly.",
+            "items": [
+              "Stay Hydrated aims to feel like a friendly companion. Please address users using informal language, often the second-person singular forms, to maintain a personal connection.",
+              "Please maintain an informal and engaging tone. Avoid overly formal or stiff language. This is especially important when crafting translations for notification reminders."
+            ]
+          },
+          "creative": {
+            "title": "Be creative.",
+            "items": {
+              "intro": "You will encounter similar or duplicate source strings, such as:",
+              "outro": "If your language allows for different ways to express the same idea, please use varied translations. This richness prevents the app from sounding monotonous and improves the overall user experience."
+            }
+          },
+          "careful": {
+            "title": "Be careful.",
+            "items": {
+              "paired": "Notification strings are often paired. For instance, strings with IDs like <firstId>after_wakeup_1_title</firstId> and <secondId>after_wakeup_1_text</secondId> always appear together. Ensure that your translation for both parts is coherent and flows seamlessly.",
+              "punctuation": "Pay close attention to correct punctuation and the placement of special characters.",
+              "expert": "You are the expert in your native language. While consistency is key, please don't hesitate to adapt or break the formal rules when it results in a more natural user experience."
+            },
+            "entities": {
+              "intro": "HTML entities can sometimes make source strings difficult to read and may lead to translation errors, such as missing tags. You can simplify the process by hiding these entities, as shown below:",
+              "example": "With this setting applied, for example:",
+              "example-content": "bold text",
+              "result": "will be converted to:"
+            }
+          }
+        }
+      },
       "privacy-notice": {
         "nav": {
           "back-to-app": "Back to App"

@@ -101,6 +101,46 @@
         "support": "Destek",
         "copyright": "© {year} Gündüz Karakeçe"
       },
+      "localization": {
+        "metadata": {
+          "title": "Yerelleştirme Kılavuzu | Stay Hydrated",
+          "description": "Stay Hydrated çevirileri için ipuçları ve kurallar."
+        },
+        "header": {
+          "title": "Yerelleştirme Kılavuzu",
+          "subtitle": "Çevirmenler için İpuçları"
+        },
+        "sections": {
+          "friendly": {
+            "title": "Samimi olun.",
+            "items": [
+              "Stay Hydrated, kullanıcıya dost bir yol arkadaşı gibi hissettirmeyi amaçlar. Kişisel bir bağ kurabilmek için kullanıcılara samimi bir dille, çoğunlukla ikinci tekil şahıs kullanarak hitap edin.",
+              "Samimi ve ilgi çekici bir ton kullanmaya özen gösterin. Aşırı resmî veya katı ifadelerden kaçının. Bu yaklaşım, özellikle bildirim hatırlatıcılarının çevirisinde büyük önem taşır."
+            ]
+          },
+          "creative": {
+            "title": "Yaratıcı olun.",
+            "items": {
+              "intro": "Aşağıdaki gibi benzer veya tekrarlayan kaynak metinlerle karşılaşabilirsiniz:",
+              "outro": "Diliniz aynı anlamı farklı şekillerde ifade etmeye elverişliyse, çeşitli çeviriler kullanmaktan çekinmeyin. Bu çeşitlilik, uygulamanın tekdüze hissettirmesini önler ve genel kullanıcı deneyimini iyileştirir."
+            }
+          },
+          "careful": {
+            "title": "Dikkatli olun.",
+            "items": {
+              "paired": "Bildirim metinleri çoğunlukla çiftler halindedir. Örneğin <firstId>after_wakeup_1_title</firstId> ve <secondId>after_wakeup_1_text</secondId> gibi kimliklere sahip metinler her zaman birlikte gösterilir. Her iki bölümün de birbiriyle uyumlu ve akıcı olmasına dikkat edin.",
+              "punctuation": "Doğru noktalama işaretlerine ve özel karakterlerin doğru konumlandırılmasına özellikle özen gösterin.",
+              "expert": "Ana dilinizin uzmanı sizsiniz. Tutarlılık önemli olsa da, daha doğal bir kullanıcı deneyimi sağladığı durumlarda kuralları uyarlamaktan veya esnetmekten çekinmeyin."
+            },
+            "entities": {
+              "intro": "HTML varlıkları (entity), kaynak metinlerin okunmasını zorlaştırabilir ve etiketlerin eksik çevrilmesi gibi hatalara yol açabilir. Aşağıda gösterildiği gibi bu varlıkları gizleyerek süreci daha kolay hâle getirebilirsiniz:",
+              "example": "Bu ayar etkinleştirildiğinde, örneğin:",
+              "example-content": "kalın yazı",
+              "result": "şu formata dönüştürülür:"
+            }
+          }
+        }
+      },
       "privacy-notice": {
         "nav": {
           "back-to-app": "Uygulamaya Dön"

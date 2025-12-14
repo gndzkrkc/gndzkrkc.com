@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 const HighlightedText = ({
   color,
@@ -39,105 +41,86 @@ const HighlightedText = ({
 };
 
 export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations(
+    'projects.stay-hydrated.localization.metadata',
+  );
+
   return {
-    title: `Localization Guidelines | Stay Hydrated`,
-    description: 'Tips and rules for translating Stay Hydrated.',
+    title: t('title'),
+    description: t('description'),
   };
 }
 
 export default function LocalizationTipsPage() {
+  const t = useTranslations('projects.stay-hydrated.localization');
+
   return (
     <main className="container max-w-2xl mx-auto">
       <article className="prose prose-zinc dark:prose-invert max-w-none leading-relaxed">
         {/* Header Section */}
         <header className="not-prose">
           <h1 className="text-3xl font-semibold tracking-tight text-foreground mb-2">
-            Localization Guidelines
+            {t('header.title')}
           </h1>
           <strong className="block text-2xl font-medium text-muted-foreground/80 mb-4">
-            Tips for Translators
+            {t('header.subtitle')}
           </strong>
         </header>
 
         <Separator className="mt-8 mb-16" />
 
         {/* 1. Be friendly */}
-        <h2>Be friendly.</h2>
+        <h2>{t('sections.friendly.title')}</h2>
         <ul className="list-disc space-y-2">
-          <li>
-            Stay Hydrated aims to feel like a friendly companion. Please address
-            users using informal language, often the second-person singular
-            forms, to maintain a personal connection.
-          </li>
-          <li>
-            Please maintain an informal and engaging tone. Avoid overly formal
-            or stiff language. This is especially important when crafting
-            translations for notification reminders.
-          </li>
+          <li>{t('sections.friendly.items.0')}</li>
+          <li>{t('sections.friendly.items.1')}</li>
         </ul>
 
         {/* 2. Be creative */}
-        <h2 className="mt-8">Be creative.</h2>
+        <h2 className="mt-8">{t('sections.creative.title')}</h2>
         <ul className="list-disc space-y-2">
           <li>
-            You will encounter similar or duplicate source strings, such as:
+            {t('sections.creative.items.intro')}
             <br />
             {/* Example strings with styling */}
             <HighlightedText color="green">
               Good morning!
-            </HighlightedText> -{' '}
+            </HighlightedText> –{' '}
             <HighlightedText color="green">Morning!</HighlightedText>
             <br />
             <HighlightedText color="green">
               Time to drink water!
             </HighlightedText>{' '}
-            -{' '}
+            –{' '}
             <HighlightedText color="green">
               It&apos;s time to drink water.
             </HighlightedText>
             <br />
             <br />
-            If your language allows for different ways to express the same idea,
-            please use varied translations. This richness prevents the app from
-            sounding monotonous and improves the overall user experience.
+            {t('sections.creative.items.outro')}
           </li>
         </ul>
 
         {/* 3. Be careful */}
-        <h2 className="mt-8">Be careful.</h2>
+        <h2 className="mt-8">{t('sections.careful.title')}</h2>
         <ul className="list-disc space-y-2">
           <li>
-            Notification strings are often paired. For instance, strings with
-            IDs like{' '}
-            <HighlightedText color="orange">
-              after_wakeup_1_title
-            </HighlightedText>{' '}
-            and{' '}
-            <HighlightedText color="orange">
-              after_wakeup_1_text
-            </HighlightedText>{' '}
-            always appear together. Ensure that your translation for both parts
-            is coherent and flows seamlessly.
+            {t.rich('sections.careful.items.paired', {
+              firstId: (chunks) => (
+                <HighlightedText color="orange">{chunks}</HighlightedText>
+              ),
+              secondId: (chunks) => (
+                <HighlightedText color="orange">{chunks}</HighlightedText>
+              ),
+            })}
           </li>
 
-          <li>
-            Pay close attention to correct punctuation and the placement of
-            special characters.
-          </li>
-
-          <li>
-            You are the expert in your native language. While consistency is
-            key, please don&apos;t hesitate to adapt or break the formal rules
-            when it results in a more natural user experience.
-          </li>
+          <li>{t('sections.careful.items.punctuation')}</li>
+          <li>{t('sections.careful.items.expert')}</li>
 
           {/* HTML Entities Tip */}
           <li>
-            HTML entities can sometimes make source strings difficult to read
-            and may lead to translation errors, such as missing tags. You can
-            simplify the process by hiding these entities, as shown below:
-            <br />
-            {/* Placeholder for the image */}
+            {t('sections.careful.entities.intro')}
             <div className="my-4">
               <Image
                 src="/crowdin_html_tip.png"
@@ -147,8 +130,8 @@ export default function LocalizationTipsPage() {
                 className="w-full h-auto rounded-lg shadow-md border"
               />
             </div>
-            With this setting applied, for example:
-            <br />
+
+            {t('sections.careful.entities.example')}
             <div className="flex flex-col items-start gap-2 my-2">
               <HighlightedText
                 color="green"
@@ -157,18 +140,18 @@ export default function LocalizationTipsPage() {
                 <HighlightedText color="yellow">
                   &amp;lt;b&amp;gt;
                 </HighlightedText>
-                <span>bold text</span>
+                {t('sections.careful.entities.example-content')}
                 <HighlightedText color="yellow">
                   &amp;lt;/b&amp;gt;
                 </HighlightedText>
               </HighlightedText>
-              <span>will be converted to:</span>
+              <span>{t('sections.careful.entities.result')}</span>
               <HighlightedText
                 color="green"
                 className="flex flex-row flex-wrap items-center gap-1"
               >
                 <HighlightedText color="yellow">&lt;0&gt;</HighlightedText>
-                <span>bold text</span>
+                {t('sections.careful.entities.example-content')}
                 <HighlightedText color="yellow">&lt;/0&gt;</HighlightedText>
               </HighlightedText>
             </div>
