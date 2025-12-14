@@ -4,8 +4,8 @@
     "description": "Çalışmalarımı ve projelerime ait kaynakları paylaştığım kişisel bir alan."
   },
   "navigation": {
-    "aria-go-home": "Ana sayfaya git",
-    "aria-go-to": "{page} sayfasına git",
+    "aria-go-home": "Ana sayfaya dön",
+    "aria-go-to": "{page} sayfasına dön",
     "aria-backward-nav": "Geri Navigasyon",
     "routes": {
       "/stay-hydrated/": "Su Günlüğü",
