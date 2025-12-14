@@ -26,14 +26,12 @@ import { getTranslations } from 'next-intl/server';
 
 // --- Types & Configuration ---
 
-interface FeatureConfig {
-  id: 'performance' | 'privacy' | 'reminders';
+const FEATURE_ITEMS: {
+  id: string;
   Icon: LucideIcon;
   iconColor: string;
   iconBg: string;
-}
-
-const FEATURE_ITEMS: FeatureConfig[] = [
+}[] = [
   {
     id: 'performance',
     Icon: Zap,
@@ -55,31 +53,6 @@ const FEATURE_ITEMS: FeatureConfig[] = [
 ];
 
 // --- Sub-Components ---
-
-const FeatureCard = ({
-  feature,
-  title,
-  description,
-}: {
-  feature: FeatureConfig;
-  title: string;
-  description: string;
-}) => {
-  const { Icon, iconBg, iconColor } = feature;
-  return (
-    <div className="group relative flex flex-col items-center p-5 rounded-2xl border bg-card/50 hover:bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-      <div
-        className={`h-12 w-12 flex items-center justify-center mb-3 ${iconBg} rounded-2xl transition-transform duration-300 group-hover:scale-110`}
-      >
-        <Icon className={`h-6 w-6 ${iconColor}`} />
-      </div>
-      <h3 className="font-medium text-foreground">{title}</h3>
-      <p className="text-xs text-muted-foreground text-center leading-relaxed mt-1">
-        {description}
-      </p>
-    </div>
-  );
-};
 
 const StatItem = ({
   value,
@@ -189,13 +162,23 @@ export default function StayHydratedPage() {
 
       {/* KEY FEATURES GRID */}
       <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {FEATURE_ITEMS.map((feature) => (
-          <FeatureCard
-            key={feature.id}
-            feature={feature}
-            title={t(`features.${feature.id}.title`)}
-            description={t(`features.${feature.id}.description`)}
-          />
+        {FEATURE_ITEMS.map(({ id, Icon, iconBg, iconColor }) => (
+          <div
+            key={id}
+            className="group relative flex flex-col items-center p-5 rounded-2xl border bg-card/50 hover:bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            <div
+              className={`h-12 w-12 flex items-center justify-center mb-3 ${iconBg} rounded-2xl transition-transform duration-300 group-hover:scale-110`}
+            >
+              <Icon className={`h-6 w-6 ${iconColor}`} />
+            </div>
+            <h3 className="font-medium text-foreground">
+              {t(`features.${id}.title`)}
+            </h3>
+            <p className="text-xs text-muted-foreground text-center leading-relaxed mt-1">
+              {t(`features.${id}.description`)}
+            </p>
+          </div>
         ))}
       </section>
 
