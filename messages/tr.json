@@ -19,7 +19,8 @@
   },
   "home": {
     "hero": {
-      "title": "BAĞIMSIZ GELİŞTİRİCİ | DİJİTAL ÜRÜNLER",
+      "role": "BAĞIMSIZ GELİŞTİRİCİ",
+      "focus": "DİJİTAL ÜRÜNLER",
       "subtitle": "Kullanıcı dostu dijital ürünler tasarlıyorum."
     },
     "status": {

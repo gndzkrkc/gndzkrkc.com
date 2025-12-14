@@ -19,7 +19,8 @@
   },
   "home": {
     "hero": {
-      "title": "INDEPENDENT CREATOR | DIGITAL PRODUCTS",
+      "role": "INDEPENDENT CREATOR",
+      "focus": "DIGITAL PRODUCTS",
       "subtitle": "Designing user-friendly digital products."
     },
     "status": {

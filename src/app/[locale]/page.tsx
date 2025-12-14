@@ -16,12 +16,12 @@ export default function HomePage() {
   const t = useTranslations('home');
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-12 px-4 space-y-20">
+    <main className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-12 space-y-20">
       {/* PERSON SCHEMA for SEO */}
       <PersonJsonLd
         name="Gündüz Karakeçe"
         url="https://gndzkrkc.com"
-        title={t('hero.title')}
+        title={`${t('hero.role')} | ${t('hero.focus')}`}
         description={t('hero.subtitle')}
         // TODO: Add avatar image url later
         email="mailto:contact@gndzkrkc.com"
@@ -37,8 +37,11 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-6xl font-extralight tracking-[0.2em] text-foreground uppercase">
             Gündüz Karakeçe
           </h1>
-          <h2 className="text-sm sm:text-base text-muted-foreground font-light tracking-[0.3em] uppercase">
-            {t('hero.title')}
+
+          <h2 className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base text-muted-foreground font-light tracking-[0.3em] uppercase">
+            <span>{t('hero.role')}</span>
+            <span className="hidden sm:block text-muted-foreground/40">|</span>
+            <span className="hidden sm:block">{t('hero.focus')}</span>
           </h2>
         </div>
 
