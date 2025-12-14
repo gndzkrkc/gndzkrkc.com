@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "bun": ">=1.3.3",
-    "node": "unsupported",
+    "node": "24.x",
     "npm": "unsupported",
     "pnpm": "unsupported",
     "yarn": "unsupported"
