@@ -77,6 +77,7 @@ export default function HomePage() {
                     alt="Stay Hydrated Logo"
                     fill
                     className="object-contain"
+                    preload
                   />
                 </div>
               </div>
