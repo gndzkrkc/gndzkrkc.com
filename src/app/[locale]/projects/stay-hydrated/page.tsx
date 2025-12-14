@@ -227,6 +227,7 @@ export default function StayHydratedPage() {
             width={646}
             height={250}
             className="h-13 w-auto"
+            preload
           />
         </Link>
       </section>
