@@ -125,7 +125,10 @@ export default function HomePage() {
             asChild
             className="rounded-full px-8 border-muted-foreground/20 hover:border-foreground/40 transition-colors"
           >
-            <Link href={href} {...(external && { target: '_blank' })}>
+            <Link
+              href={href}
+              {...(external && { target: '_blank', rel: 'me noopener' })}
+            >
               <Icon className="h-4 w-4 mr-2 opacity-70" />
               <span className="text-xs font-normal tracking-widest uppercase">
                 {t(`links.${label}`)}
