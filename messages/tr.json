@@ -8,8 +8,8 @@
     "aria-go-to": "{page} sayfasına git",
     "aria-backward-nav": "Geri Navigasyon",
     "routes": {
-      "/projects/stay-hydrated/": "Su Günlüğü",
-      "/projects/stay-hydrated/privacy-notice/": "Gizlilik Bildirimi"
+      "/stay-hydrated/": "Su Günlüğü",
+      "/stay-hydrated/privacy-notice/": "Gizlilik Bildirimi"
     }
   },
   "theme-toggle": {

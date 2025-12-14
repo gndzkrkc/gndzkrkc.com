@@ -291,7 +291,7 @@ export default function StayHydratedPage() {
           </Button>
 
           <Button asChild variant="outline">
-            <IntlLink href="/projects/stay-hydrated/localization/">
+            <IntlLink href="/stay-hydrated/localization/">
               <Users className="h-4 w-4 mr-2" />
               {t('description.contribution.localization-tips-cta')}
             </IntlLink>
@@ -303,7 +303,7 @@ export default function StayHydratedPage() {
       <footer className="flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-muted-foreground pt-4">
         <div className="flex gap-6">
           <IntlLink
-            href="/projects/stay-hydrated/privacy-notice/"
+            href="/stay-hydrated/privacy-notice/"
             className="hover:text-foreground flex items-center gap-2 transition-colors"
           >
             <Shield className="h-4 w-4" /> {t('footer.privacy-notice')}

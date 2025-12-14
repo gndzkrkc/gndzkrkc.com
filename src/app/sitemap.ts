@@ -58,7 +58,7 @@ function generateAlternates(
 
 /**
  * Calculate URL depth (number of path segments).
- * '/' = 0, '/projects/stay-hydrated/' = 2, '/projects/stay-hydrated/privacy-notice/' = 3
+ * '/' = 0, '/stay-hydrated/' = 1, '/stay-hydrated/privacy-notice/' = 2
  */
 function getUrlDepth(path: string): number {
   return path.split('/').filter(Boolean).length;

@@ -67,7 +67,7 @@ export default function HomePage() {
         </div>
 
         {/* Stay Hydrated */}
-        <IntlLink href="/projects/stay-hydrated/" className="block group">
+        <IntlLink href="/stay-hydrated/" className="block group">
           <Card className="relative overflow-hidden border-border/60 transition-all duration-500 hover:border-foreground/10 hover:shadow-xl dark:hover:shadow-primary/5 bg-card/50 backdrop-blur-sm">
             <CardHeader className="flex flex-row items-center gap-6 p-6">
               <div className="h-16 w-16 shrink-0 rounded-2xl bg-card shadow-sm flex items-center justify-center p-2 group-hover:scale-105 transition-transform duration-500">

@@ -8,8 +8,8 @@
     "aria-go-to": "Go to {page}",
     "aria-backward-nav": "Backward Navigation",
     "routes": {
-      "/projects/stay-hydrated/": "Stay Hydrated",
-      "/projects/stay-hydrated/privacy-notice/": "Privacy Notice"
+      "/stay-hydrated/": "Stay Hydrated",
+      "/stay-hydrated/privacy-notice/": "Privacy Notice"
     }
   },
   "theme-toggle": {
