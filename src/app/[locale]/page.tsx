@@ -10,12 +10,27 @@ import {
 import { ArrowRight, Construction, Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import PersonJsonLd from '@/components/person-json-ld';
 
 export default function HomePage() {
   const t = useTranslations('home');
 
   return (
     <main className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-12 px-4 space-y-20">
+      {/* PERSON SCHEMA for SEO */}
+      <PersonJsonLd
+        name="Gündüz Karakeçe"
+        url="https://gndzkrkc.com"
+        title={t('hero.title')}
+        description={t('hero.subtitle')}
+        // TODO: Add avatar image url later
+        email="mailto:contact@gndzkrkc.com"
+        sameAs={[
+          'https://github.com/gndzkrkc',
+          'https://www.linkedin.com/in/gndzkrkc/',
+        ]}
+      />
+
       {/* 1. HERO SECTION */}
       <section className="flex flex-col items-center text-center space-y-10 max-w-3xl">
         <div className="space-y-6">
