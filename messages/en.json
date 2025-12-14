@@ -66,10 +66,10 @@
       },
       "stats": {
         "downloads": "Downloads",
-        "downloads_val": "200K+",
+        "downloads-val": "200K+",
         "ratings": "8K Ratings",
         "reviews": "Reviews",
-        "reviews_val": "3K"
+        "reviews-val": "3K"
       },
       "cta": {
         "download": "Get it on Google Play"

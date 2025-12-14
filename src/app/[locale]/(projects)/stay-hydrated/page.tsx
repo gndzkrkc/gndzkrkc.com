@@ -200,7 +200,7 @@ export default function StayHydratedPage() {
 
           {/* 2. Reviews (Hidden on mobile) */}
           <StatItem
-            value={t('stats.reviews_val')}
+            value={t('stats.reviews-val')}
             label={t('stats.reviews')}
             icon={MessageSquareText}
             iconColorClass="text-blue-500"
@@ -209,7 +209,7 @@ export default function StayHydratedPage() {
 
           {/* 3. Downloads */}
           <StatItem
-            value={t('stats.downloads_val')}
+            value={t('stats.downloads-val')}
             label={t('stats.downloads')}
             icon={Download}
             iconColorClass="text-green-500"

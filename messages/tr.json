@@ -66,10 +66,10 @@
       },
       "stats": {
         "downloads": "İndirme",
-        "downloads_val": "200B+",
+        "downloads-val": "200B+",
         "ratings": "8B+ Puanlama",
         "reviews": "Yorum",
-        "reviews_val": "3B"
+        "reviews-val": "3B"
       },
       "cta": {
         "download": "Google Play'den İndirin"
