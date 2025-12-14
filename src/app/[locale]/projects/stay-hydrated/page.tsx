@@ -106,12 +106,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: 'projects.stay-hydrated',
+    namespace: 'projects.stay-hydrated.header',
   });
 
   return {
-    title: `${t('header.title')} | Gündüz Karakeçe`,
-    description: t('header.subtitle'),
+    title: `${t('title')} | Gündüz Karakeçe`,
+    description: t('subtitle'),
   };
 }
 
