@@ -4,6 +4,18 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
+  redirects: async () => [
+    {
+      source: '/stayhydrated/policy',
+      destination: '/stay-hydrated/privacy-notice',
+      permanent: true,
+    },
+    {
+      source: '/stayhydrated/privacy-policy.html',
+      destination: '/stay-hydrated/privacy-notice',
+      permanent: true,
+    },
+  ],
   headers: async () => {
     return [
       {
