@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { BreadcrumbNavigation } from '@/components/breadcrumb-navigation';
+import { SITE_CONFIG } from '@/lib/constants';
 
 const inter = Inter({
   variable: '--font-sans',
@@ -26,6 +27,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
+    metadataBase: new URL(SITE_CONFIG.url),
     title: t('title'),
     description: t('description'),
   };
