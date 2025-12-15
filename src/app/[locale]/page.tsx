@@ -59,7 +59,7 @@ export default function HomePage() {
       {/* 2. FEATURED PROJECTS */}
       <section className="w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="flex items-center justify-center mb-6">
-          <h3 className="text-[10px] font-bold text-muted-foreground/60 uppercase tracking-[0.4em]">
+          <h3 className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.4em]">
             {t('featured.title')}
           </h3>
         </div>
