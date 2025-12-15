@@ -8,7 +8,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useIntlPathname, useIntlRouter } from '@/i18n/navigation';
 import { i18nRoutingConfig, Locale } from '@/i18n/routing';
 
-const SCROLL_THRESHOLD = 50;
+const SCROLL_THRESHOLD = 30;
 
 const THEMES = {
   system: { next: 'light', icon: SunMoon },

@@ -55,9 +55,7 @@ export default async function RootLayout({
             <div className="min-h-screen">
               <BreadcrumbNavigation />
               <ModeToggle />
-              <div className="pt-8 pb-24 md:pt-24 md:pb-48 px-6">
-                {children}
-              </div>
+              <div className="pt-24 pb-24 md:pb-48 px-6">{children}</div>
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>
