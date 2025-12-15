@@ -73,7 +73,8 @@ export default function HomePage() {
                   <Image
                     src="/stay-hydrated.png"
                     alt="Stay Hydrated Logo"
-                    fill
+                    width={48}
+                    height={48}
                     className="object-contain"
                     preload
                   />
