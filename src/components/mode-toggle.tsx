@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Sun, Moon, SunMoon } from 'lucide-react';
 import { Button } from './ui/button';
-import { useTranslations } from 'next-intl';
-import { useIntlPathname } from '@/i18n/navigation';
-import { i18nRoutingConfig } from '@/i18n/routing';
+import { useLocale, useTranslations } from 'next-intl';
+import { useIntlPathname, useIntlRouter } from '@/i18n/navigation';
+import { i18nRoutingConfig, Locale } from '@/i18n/routing';
 
 const SCROLL_THRESHOLD = 50;
 
@@ -16,15 +16,27 @@ const THEMES = {
   dark: { next: 'system', icon: Moon },
 } as const;
 
-export function ThemeToggle() {
+export function ModeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(true);
   const visibleRef = useRef(true);
 
-  const t = useTranslations('theme-toggle');
+  const t = useTranslations('mode-toggle');
+  const locale = useLocale() as Locale;
+  const router = useIntlRouter();
   const pathname = useIntlPathname();
-  const { pathnames } = i18nRoutingConfig;
+  const { locales, pathnames } = i18nRoutingConfig;
+
+  const nextLocale = locales[(locales.indexOf(locale) + 1) % locales.length];
+  const nextLocaleName =
+    new Intl.DisplayNames([nextLocale], {
+      type: 'language',
+    }).of(nextLocale) ?? nextLocale.toUpperCase();
+
+  const handleToggle = () => {
+    router.replace(pathname, { locale: nextLocale });
+  };
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -63,9 +75,19 @@ export function ThemeToggle() {
       <Button
         variant="outline"
         size="icon"
+        onClick={handleToggle}
+        aria-label={t('aria-switch-language-to', { language: nextLocaleName })}
+        className="shadow-xl text-xs font-medium uppercase"
+      >
+        {locale}
+      </Button>
+
+      <Button
+        variant="outline"
+        size="icon"
         onClick={() => setTheme(current.next)}
         aria-label={t(`aria-switch-to-${current.next}`)}
-        className="shadow-xl -mt-0.5"
+        className="shadow-xl"
       >
         <current.icon className="h-5 w-5" />
       </Button>

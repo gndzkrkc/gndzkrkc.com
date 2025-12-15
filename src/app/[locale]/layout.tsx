@@ -4,7 +4,7 @@ import '../globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { ThemeToggle } from '@/components/theme-toggle';
+import { ModeToggle } from '@/components/mode-toggle';
 import { BreadcrumbNavigation } from '@/components/breadcrumb-navigation';
 import { SITE_CONFIG } from '@/lib/constants';
 
@@ -54,7 +54,7 @@ export default async function RootLayout({
           <NextIntlClientProvider>
             <div className="min-h-screen">
               <BreadcrumbNavigation />
-              <ThemeToggle />
+              <ModeToggle />
               <div className="pt-8 pb-24 md:pt-24 md:pb-48 px-6">
                 {children}
               </div>

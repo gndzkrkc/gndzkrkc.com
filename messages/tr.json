@@ -21,7 +21,8 @@
       }
     }
   },
-  "theme-toggle": {
+  "mode-toggle": {
+    "aria-switch-language-to": "{language} diline geç",
     "aria-switch-to-light": "Açık moda geç",
     "aria-switch-to-dark": "Koyu moda geç",
     "aria-switch-to-system": "Sistem temasına uy"
