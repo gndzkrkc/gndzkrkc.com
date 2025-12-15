@@ -34,8 +34,14 @@ export function ModeToggle() {
       type: 'language',
     }).of(nextLocale) ?? nextLocale.toUpperCase();
 
-  const handleToggle = () => {
-    router.replace(pathname, { locale: nextLocale });
+  const switchLanguage = () => {
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        router.replace(pathname, { locale: nextLocale, scroll: false });
+      });
+    } else {
+      router.replace(pathname, { locale: nextLocale, scroll: false });
+    }
   };
 
   useEffect(() => {
@@ -75,7 +81,7 @@ export function ModeToggle() {
       <Button
         variant="outline"
         size="icon"
-        onClick={handleToggle}
+        onClick={switchLanguage}
         aria-label={t('aria-switch-language-to', { language: nextLocaleName })}
         className="shadow-xl text-xs font-medium uppercase"
       >
