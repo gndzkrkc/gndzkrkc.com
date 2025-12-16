@@ -1,29 +1,30 @@
-import Link from 'next/link';
+import { Metadata } from 'next';
 import Image from 'next/image';
-import { IntlLink } from '@/i18n/navigation';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import {
-  Shield,
-  ShieldCheck,
-  Mail,
-  Zap,
-  Sparkles,
-  LucideIcon,
-  Star,
+  Cloud,
   Download,
-  MessageSquareText,
-  Users,
   Globe,
   HeartPulse,
-  Cloud,
-  Palette,
   Lightbulb,
+  LucideIcon,
+  Mail,
+  MessageSquareText,
+  Palette,
+  Shield,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  Users,
+  Zap,
 } from 'lucide-react';
-import { useTranslations, useLocale } from 'next-intl';
-import { Metadata } from 'next';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+
+import { IntlLink } from '@/i18n/navigation';
 import { SITE_CONFIG, STAY_HYDRATED } from '@/lib/constants';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 // --- Types & Configuration ---
 

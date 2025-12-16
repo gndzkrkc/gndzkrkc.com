@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
+
 import {
-  i18nRoutingConfig,
-  type PathnameKey,
   type Locale,
+  type PathnameKey,
+  i18nRoutingConfig,
 } from '@/i18n/routing';
 import { SITE_CONFIG } from '@/lib/constants';
 

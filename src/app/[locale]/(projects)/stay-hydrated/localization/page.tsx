@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { Separator } from '@/components/ui/separator';
-import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+
+import { cn } from '@/lib/utils';
+import { Separator } from '@/components/ui/separator';
 
 const HighlightedText = ({
   color,

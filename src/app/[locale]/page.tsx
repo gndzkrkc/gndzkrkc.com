@@ -1,5 +1,10 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, Construction, Github, Linkedin, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+
 import { IntlLink } from '@/i18n/navigation';
+import { CONTACT, SITE_CONFIG, SOCIAL_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -7,11 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { ArrowRight, Construction, Github, Linkedin, Mail } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
 import PersonJsonLd from '@/components/person-json-ld';
-import { SITE_CONFIG, SOCIAL_LINKS, CONTACT } from '@/lib/constants';
 
 export default function HomePage() {
   const t = useTranslations('home');

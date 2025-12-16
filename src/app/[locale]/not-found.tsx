@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+
 import { IntlLink } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 
 export default function NotFoundPage() {
   const t = useTranslations('navigation.not-found');

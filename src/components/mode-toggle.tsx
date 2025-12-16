@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { Sun, Moon, SunMoon } from 'lucide-react';
-import { Button } from './ui/button';
+import { Moon, Sun, SunMoon } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { useTheme } from 'next-themes';
+
 import { useIntlPathname, useIntlRouter } from '@/i18n/navigation';
-import { i18nRoutingConfig, Locale } from '@/i18n/routing';
+import { Locale, i18nRoutingConfig } from '@/i18n/routing';
+import { Button } from './ui/button';
 
 const SCROLL_THRESHOLD = 30;
 

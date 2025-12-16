@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
-import '../globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { NextIntlClientProvider } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
-import { ModeToggle } from '@/components/mode-toggle';
-import { BreadcrumbNavigation } from '@/components/breadcrumb-navigation';
-import { SITE_CONFIG } from '@/lib/constants';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+import { SITE_CONFIG } from '@/lib/constants';
+import { BreadcrumbNavigation } from '@/components/breadcrumb-navigation';
+import { ModeToggle } from '@/components/mode-toggle';
+import { ThemeProvider } from '@/components/theme-provider';
+import '../globals.css';
 
 const inter = Inter({
   variable: '--font-sans',

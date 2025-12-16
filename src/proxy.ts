@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
+
 import { i18nRoutingConfig } from '@/i18n/routing';
 
 export function proxy(request: NextRequest) {

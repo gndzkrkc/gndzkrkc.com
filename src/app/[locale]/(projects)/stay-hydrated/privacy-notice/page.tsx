@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import { Separator } from '@/components/ui/separator';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+
+import { Separator } from '@/components/ui/separator';
 
 export async function generateMetadata({
   params,

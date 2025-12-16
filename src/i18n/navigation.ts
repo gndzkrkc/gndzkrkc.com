@@ -1,4 +1,5 @@
 import { createNavigation } from 'next-intl/navigation';
+
 import { i18nRoutingConfig } from './routing';
 
 // Lightweight wrappers around Next.js' navigation

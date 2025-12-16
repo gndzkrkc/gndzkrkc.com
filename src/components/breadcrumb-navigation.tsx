@@ -1,9 +1,10 @@
 'use client';
 
-import { IntlLink, useIntlPathname } from '@/i18n/navigation';
-import { i18nRoutingConfig, type PathnameKey } from '@/i18n/routing';
+import { ChevronRight, Home } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { Home, ChevronRight } from 'lucide-react';
+
+import { IntlLink, useIntlPathname } from '@/i18n/navigation';
+import { type PathnameKey, i18nRoutingConfig } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 
 export function BreadcrumbNavigation() {
