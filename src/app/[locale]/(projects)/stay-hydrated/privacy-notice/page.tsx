@@ -24,13 +24,13 @@ export default function PrivacyNoticePage() {
   const t = useTranslations('projects.stay-hydrated.privacy-notice');
 
   return (
-    <main className="container max-w-2xl mx-auto">
+    <main className="container mx-auto max-w-2xl">
       {/* HEADER SECTION */}
       <header>
-        <h1 className="text-3xl font-semibold tracking-tight text-foreground mb-2">
+        <h1 className="text-foreground mb-2 text-3xl font-semibold tracking-tight">
           {t('header.title')}
         </h1>
-        <strong className="block text-2xl font-medium text-muted-foreground/80 mb-4">
+        <strong className="text-muted-foreground/80 mb-4 block text-2xl font-medium">
           {t('header.subtitle')}
         </strong>
       </header>
@@ -41,7 +41,7 @@ export default function PrivacyNoticePage() {
       <article className="prose prose-zinc dark:prose-invert max-w-none leading-relaxed">
         {/* 1. Abstract */}
         <h2>{t('abstract.title')}</h2>
-        <p className="font-medium text-foreground">{t('abstract.statement')}</p>
+        <p className="text-foreground font-medium">{t('abstract.statement')}</p>
 
         {/* 2. Data Storage */}
         <h2>{t('data-storage.title')}</h2>
@@ -66,7 +66,7 @@ export default function PrivacyNoticePage() {
 
       {/* FOOTER SECTION */}
       <footer className="space-y-8">
-        <div className="text-sm text-muted-foreground space-y-3">
+        <div className="text-muted-foreground space-y-3 text-sm">
           <p>
             <sup>1</sup> {t('footnotes.1')}
           </p>
@@ -77,7 +77,7 @@ export default function PrivacyNoticePage() {
 
         <Separator />
 
-        <div className="text-sm font-medium text-muted-foreground/80">
+        <div className="text-muted-foreground/80 text-sm font-medium">
           <p>{t('footer.last-updated')}</p>
         </div>
       </footer>

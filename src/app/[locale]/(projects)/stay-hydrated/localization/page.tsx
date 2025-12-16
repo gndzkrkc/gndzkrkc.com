@@ -30,7 +30,7 @@ const HighlightedText = ({
   return (
     <span
       className={cn(
-        'inline-flex p-1 rounded font-mono text-sm',
+        'inline-flex rounded p-1 font-mono text-sm',
         variants[color],
         className,
       )}
@@ -55,14 +55,14 @@ export default function LocalizationTipsPage() {
   const t = useTranslations('projects.stay-hydrated.localization');
 
   return (
-    <main className="container max-w-2xl mx-auto">
+    <main className="container mx-auto max-w-2xl">
       <article className="prose prose-zinc dark:prose-invert max-w-none leading-relaxed">
         {/* Header Section */}
         <header className="not-prose">
-          <h1 className="text-3xl font-semibold tracking-tight text-foreground mb-2">
+          <h1 className="text-foreground mb-2 text-3xl font-semibold tracking-tight">
             {t('header.title')}
           </h1>
-          <strong className="block text-2xl font-medium text-muted-foreground/80 mb-4">
+          <strong className="text-muted-foreground/80 mb-4 block text-2xl font-medium">
             {t('header.subtitle')}
           </strong>
         </header>
@@ -127,12 +127,12 @@ export default function LocalizationTipsPage() {
                 alt="Crowdin HTML Tag Tip"
                 width={500}
                 height={150}
-                className="w-full h-auto rounded-lg shadow-md border"
+                className="h-auto w-full rounded-lg border shadow-md"
               />
             </div>
 
             {t('sections.careful.entities.example')}
-            <div className="flex flex-col items-start gap-2 my-2">
+            <div className="my-2 flex flex-col items-start gap-2">
               <HighlightedText
                 color="green"
                 className="flex flex-row flex-wrap items-center gap-1"

@@ -74,8 +74,8 @@ export function ModeToggle() {
 
   return (
     <div
-      className={`fixed top-8 right-6 lg:right-8 z-50 flex flex-col gap-2 transition-opacity duration-300 ${
-        visible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      className={`fixed top-8 right-6 z-50 flex flex-col gap-2 transition-opacity duration-300 lg:right-8 ${
+        visible ? 'opacity-100' : 'pointer-events-none opacity-0'
       }`}
     >
       <Button
@@ -83,7 +83,7 @@ export function ModeToggle() {
         size="icon"
         onClick={switchLanguage}
         aria-label={t('aria-switch-language-to', { language: nextLocaleName })}
-        className="shadow-xl text-xs font-medium uppercase"
+        className="text-xs font-medium uppercase shadow-xl"
       >
         {locale}
       </Button>

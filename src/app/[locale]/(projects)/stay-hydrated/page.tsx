@@ -73,7 +73,7 @@ const StatItem = ({
       <span className="text-2xl font-medium">{value}</span>
       <Icon className={`h-5 w-5 ${iconColorClass}`} />
     </div>
-    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide mt-1">
+    <span className="text-muted-foreground mt-1 text-xs font-medium tracking-wide uppercase">
       {label}
     </span>
   </div>
@@ -88,11 +88,11 @@ const ExtraFeatureHighlight = ({
   title: string;
   description: string;
 }) => (
-  <div className="flex items-start space-x-3 p-4 bg-card rounded-xl border">
-    <Icon className="h-5 w-5 mt-1 text-blue-500 shrink-0" />
+  <div className="bg-card flex items-start space-x-3 rounded-xl border p-4">
+    <Icon className="mt-1 h-5 w-5 shrink-0 text-blue-500" />
     <div>
-      <p className="font-semibold text-foreground m-0">{title}</p>
-      <p className="text-sm text-muted-foreground mt-0.5 m-0">{description}</p>
+      <p className="text-foreground m-0 font-semibold">{title}</p>
+      <p className="text-muted-foreground m-0 mt-0.5 text-sm">{description}</p>
     </div>
   </div>
 );
@@ -122,10 +122,10 @@ export default function StayHydratedPage() {
   const year = new Date().getFullYear();
 
   return (
-    <main className="container max-w-2xl mx-auto space-y-12 selection:bg-blue-100 selection:text-blue-900">
+    <main className="container mx-auto max-w-2xl space-y-12 selection:bg-blue-100 selection:text-blue-900">
       {/* HEADER */}
-      <section className="space-y-6 flex flex-col items-center text-center">
-        <div className="h-32 w-32 bg-card rounded-4xl shadow-md flex items-center justify-center p-4 ring-1 ring-accent overflow-hidden">
+      <section className="flex flex-col items-center space-y-6 text-center">
+        <div className="bg-card ring-accent flex h-32 w-32 items-center justify-center overflow-hidden rounded-4xl p-4 shadow-md ring-1">
           <Image
             src="/stay-hydrated.png"
             alt={t('header.title')}
@@ -136,25 +136,25 @@ export default function StayHydratedPage() {
           />
         </div>
 
-        <header className="space-y-3 mt-3">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
+        <header className="mt-3 space-y-3">
+          <h1 className="text-foreground text-4xl font-semibold tracking-tight md:text-5xl">
             {t('header.title')}
           </h1>
-          <strong className="block text-xl font-medium text-muted-foreground max-w-lg mx-auto">
+          <strong className="text-muted-foreground mx-auto block max-w-lg text-xl font-medium">
             {t('header.subtitle')}
           </strong>
         </header>
 
-        <div className="flex flex-wrap gap-2 justify-center">
-          <Badge variant="outline" className="px-3 py-1 text-muted-foreground">
+        <div className="flex flex-wrap justify-center gap-2">
+          <Badge variant="outline" className="text-muted-foreground px-3 py-1">
             {t('badges.category')}
           </Badge>
-          <Badge variant="outline" className="px-3 py-1 text-muted-foreground">
+          <Badge variant="outline" className="text-muted-foreground px-3 py-1">
             {t('badges.freemium')}
           </Badge>
           <Badge
             variant="secondary"
-            className="px-3 py-1 bg-green-100 text-green-700 hover:bg-green-100 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800"
+            className="border border-green-200 bg-green-100 px-3 py-1 text-green-700 hover:bg-green-100 dark:border-green-800 dark:bg-green-900/30 dark:text-green-400"
           >
             {t('badges.android')}
           </Badge>
@@ -162,23 +162,23 @@ export default function StayHydratedPage() {
       </section>
 
       {/* KEY FEATURES GRID */}
-      <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {FEATURE_ITEMS.map(({ id, Icon, iconBg, iconColor }) => (
           <div
             key={id}
-            className="group relative flex flex-row sm:flex-col items-center p-4 sm:p-5 rounded-2xl border bg-card/50 hover:bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            className="group bg-card/50 hover:bg-card relative flex flex-row items-center rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:flex-col sm:p-5"
           >
             <div
-              className={`h-12 w-12 shrink-0 flex items-center justify-center mr-4 sm:mr-0 sm:mb-3 ${iconBg} rounded-2xl transition-transform duration-300 group-hover:scale-110`}
+              className={`mr-4 flex h-12 w-12 shrink-0 items-center justify-center sm:mr-0 sm:mb-3 ${iconBg} rounded-2xl transition-transform duration-300 group-hover:scale-110`}
             >
               <Icon className={`h-6 w-6 ${iconColor}`} />
             </div>
 
             <div className="flex flex-col text-left sm:text-center">
-              <h3 className="font-medium text-foreground">
+              <h3 className="text-foreground font-medium">
                 {t(`features.${id}.title`)}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mt-0.5 sm:mt-1">
+              <p className="text-muted-foreground mt-0.5 text-sm leading-relaxed sm:mt-1">
                 {t(`features.${id}.description`)}
               </p>
             </div>
@@ -187,8 +187,8 @@ export default function StayHydratedPage() {
       </section>
 
       {/* STATS & DOWNLOAD CARD */}
-      <section className="bg-muted/30 border rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="flex w-full md:w-auto justify-center md:justify-start divide-x divide-border">
+      <section className="bg-muted/30 flex flex-col items-center justify-between gap-8 rounded-3xl border p-6 sm:p-8 md:flex-row">
+        <div className="divide-border flex w-full justify-center divide-x md:w-auto md:justify-start">
           {/* 1. Rating */}
           <StatItem
             value="~4.8"
@@ -222,7 +222,7 @@ export default function StayHydratedPage() {
           href={STAY_HYDRATED.playStoreUrl}
           rel="noopener noreferrer"
           target="_blank"
-          className="transition-transform hover:scale-105 active:scale-95 shrink-0"
+          className="shrink-0 transition-transform hover:scale-105 active:scale-95"
           aria-label={t('cta.download')}
         >
           <Image
@@ -237,7 +237,7 @@ export default function StayHydratedPage() {
       </section>
 
       {/* DESCRIPTION ARTICLE */}
-      <article className="prose prose-zinc dark:prose-invert max-w-none text-left leading-relaxed my-8 md:my-16">
+      <article className="prose prose-zinc dark:prose-invert my-8 max-w-none text-left leading-relaxed md:my-16">
         <h2>{t('description.why-title')}</h2>
         <p>
           {t('description.paragraph-1')} {t('description.paragraph-1-continue')}
@@ -245,7 +245,7 @@ export default function StayHydratedPage() {
         <p>{t('description.paragraph-2')}</p>
 
         {/* EXTRA FEATURES LIST */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
+        <div className="not-prose my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
           <ExtraFeatureHighlight
             Icon={HeartPulse}
             title={t('description.features.health')}
@@ -270,7 +270,7 @@ export default function StayHydratedPage() {
       </article>
 
       {/* CONTRIBUTION SECTION */}
-      <section className="border rounded-3xl p-6 sm:p-8 bg-muted/30 space-y-4 mb-8 md:mb-16">
+      <section className="bg-muted/30 mb-8 space-y-4 rounded-3xl border p-6 sm:p-8 md:mb-16">
         <h2 className="text-xl font-semibold">
           {t('description.contribution.title')}
         </h2>
@@ -279,21 +279,21 @@ export default function StayHydratedPage() {
           {t('description.contribution.paragraph')}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <div className="flex flex-col gap-4 pt-2 sm:flex-row">
           <Button asChild>
             <Link
               href={STAY_HYDRATED.crowdinUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Globe className="h-4 w-4 mr-2" />
+              <Globe className="mr-2 h-4 w-4" />
               {t('description.contribution.crowdin-cta')}
             </Link>
           </Button>
 
           <Button asChild variant="outline">
             <IntlLink href="/stay-hydrated/localization/">
-              <Users className="h-4 w-4 mr-2" />
+              <Users className="mr-2 h-4 w-4" />
               {t('description.contribution.localization-tips-cta')}
             </IntlLink>
           </Button>
@@ -301,7 +301,7 @@ export default function StayHydratedPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-muted-foreground pt-4">
+      <footer className="text-muted-foreground flex flex-col items-center justify-between gap-6 pt-4 text-sm sm:flex-row">
         <div className="flex gap-6">
           <IntlLink
             href="/stay-hydrated/privacy-notice/"

@@ -33,7 +33,7 @@ export function BreadcrumbNavigation() {
 
   return (
     <nav
-      className="mx-auto max-w-4xl px-6 pt-8 text-muted-foreground"
+      className="text-muted-foreground mx-auto max-w-4xl px-6 pt-8"
       aria-label={t('aria-backward-nav')}
     >
       <ol className="flex items-center gap-2 text-sm">
