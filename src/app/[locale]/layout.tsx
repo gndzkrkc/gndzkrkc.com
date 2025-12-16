@@ -7,6 +7,8 @@ import { getTranslations } from 'next-intl/server';
 import { ModeToggle } from '@/components/mode-toggle';
 import { BreadcrumbNavigation } from '@/components/breadcrumb-navigation';
 import { SITE_CONFIG } from '@/lib/constants';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   variable: '--font-sans',
@@ -59,6 +61,8 @@ export default async function RootLayout({
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
