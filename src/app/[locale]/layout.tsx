@@ -21,6 +21,8 @@ const jbMono = JetBrains_Mono({
   subsets: ['latin'],
 });
 
+export const runtime = 'edge';
+
 export async function generateMetadata({
   params,
 }: {
