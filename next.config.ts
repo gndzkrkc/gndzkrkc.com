@@ -3,6 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  devIndicators: false,
   output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
   redirects: async () => [
     {
