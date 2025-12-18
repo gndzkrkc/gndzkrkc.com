@@ -53,7 +53,8 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+              "frame-src 'self' https://vercel.live",
+              "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://vercel.live",
               "script-src-attr 'none'",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' blob: data:",
