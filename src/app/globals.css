@@ -127,10 +127,14 @@
  * The old content stays for 700ms to prevent flash.
  */
 
-/* Sets the 3D perspective on the root element for rotation effects */
 :root {
   view-transition-name: root;
+}
+
+/* Sets the 3D perspective on the transition container for rotation effects  */
+::view-transition-group(root) {
   perspective: 1200px;
+  transform-style: preserve-3d;
 }
 
 /* Ensure the background is transparent during the transition */
